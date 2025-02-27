@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Hola mi primer proyecto</h1>
+    <h2>{{practice}}</h2>
+    <ul>
+      <p>taotal {{lists().length}}</p>
+      <li *ngFor="let list of lists(); index as i">
+        {{i}} {{ list }}
+      </li>
+    </ul>
+    <hr />
+    <h2>{{ 'Hola'}}</h2>
+    <p> la suma es 3 + 3 es {{ 3 + 3 }} {{5-6}}</p>
+    <p>Hola soy {{ name().charAt(1) }} y mi edad es {{ status }}</p>
+    <hr />
+    <img [src]="person.avatar" alt="Avatar" class="avatar-image">
+    <input type="number" [value]="person.age">
+    <button [disabled]="status">click</button>
+    <p>person: {{ person.name }}</p>
+    <input #inputElement type="text" value="a">
+    <p>afksdjfklajsdfksjdf</p>
+    <button (click)="clickHandler(inputElement.value)"></button>
+    <hr />
+    <button disabled="disabled">djklfahskljdfhalsdhf</button>
+    <p>(change)</p>
+    <input type="text" [value]="person.name" (change)="changeHandler($event)">
+    <p>(keydown)</p>
+    <input type="text" [value]="person.name" (keydown)="keydownHandler($event)">
+    <p>{{valueInput}}</p>
+  </div>
